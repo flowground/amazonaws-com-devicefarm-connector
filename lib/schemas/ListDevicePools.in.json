@@ -1,0 +1,73 @@
+{
+    "type": "object",
+    "properties": {
+        "nextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents the result of a list device pools request.",
+            "example": {
+                "arn": "arn:aws:devicefarm:us-west-2:123456789101:project:EXAMPLE-GUID-123-456",
+                "type": "PRIVATE"
+            },
+            "properties": {
+                "arn": {
+                    "description": "The project ARN.",
+                    "minLength": 32,
+                    "type": "string"
+                },
+                "nextToken": {
+                    "description": "An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list.",
+                    "maxLength": 1024,
+                    "minLength": 4,
+                    "type": "string"
+                },
+                "type": {
+                    "description": "<p>The device pools' type.</p> <p>Allowed values include:</p> <ul> <li> <p>CURATED: A device pool that is created and managed by AWS Device Farm.</p> </li> <li> <p>PRIVATE: A device pool that is created and managed by the device pool developer.</p> </li> </ul>",
+                    "enum": [
+                        "CURATED",
+                        "PRIVATE"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "arn"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

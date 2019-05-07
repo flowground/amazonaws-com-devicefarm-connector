@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "arn": {
+                    "description": "The Amazon Resource Name (ARN) of the instance profile.",
+                    "minLength": 32,
+                    "type": "string"
+                },
+                "description": {
+                    "description": "The updated description for your instance profile.",
+                    "maxLength": 16384,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "excludeAppPackagesFromCleanup": {
+                    "description": "<p>An array of strings specifying the list of app packages that should not be cleaned up from the device after a test run is over.</p> <p>The list of packages is only considered if you set <code>packageCleanup</code> to <code>true</code>.</p>",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The updated name for your instance profile.",
+                    "maxLength": 256,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "packageCleanup": {
+                    "description": "The updated choice for whether you want to specify package cleanup. The default value is <code>false</code> for private devices.",
+                    "type": "boolean"
+                },
+                "rebootAfterUse": {
+                    "description": "The updated choice for whether you want to reboot the device after use. The default value is <code>true</code>.",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "arn"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "nextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Represents a request to the list tests operation.",
+            "example": {
+                "arn": "arn:aws:devicefarm:us-west-2:123456789101:project:EXAMPLE-GUID-123-456",
+                "nextToken": "RW5DdDJkMWYwZjM2MzM2VHVpOHJIUXlDUXlhc2QzRGViYnc9SEXAMPLE"
+            },
+            "properties": {
+                "arn": {
+                    "description": "The test suite's Amazon Resource Name (ARN).",
+                    "minLength": 32,
+                    "type": "string"
+                },
+                "nextToken": {
+                    "description": "An identifier that was returned from the previous call to this operation, which can be used to return the next set of items in the list.",
+                    "maxLength": 1024,
+                    "minLength": 4,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "arn"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

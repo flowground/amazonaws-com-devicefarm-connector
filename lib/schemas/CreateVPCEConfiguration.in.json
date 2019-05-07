@@ -1,0 +1,75 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "serviceDnsName": {
+                    "description": "The DNS name of the service running in your VPC that you want Device Farm to test.",
+                    "maxLength": 2048,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "vpceConfigurationDescription": {
+                    "description": "An optional description, providing more details about your VPC endpoint configuration.",
+                    "maxLength": 2048,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "vpceConfigurationName": {
+                    "description": "The friendly name you give to your VPC endpoint configuration, to manage your configurations more easily.",
+                    "maxLength": 1024,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "vpceServiceName": {
+                    "description": "The name of the VPC endpoint service running inside your AWS account that you want Device Farm to test.",
+                    "maxLength": 2048,
+                    "minLength": 0,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "vpceConfigurationName",
+                "vpceServiceName",
+                "serviceDnsName"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

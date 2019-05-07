@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "arn": {
+                    "description": "The Amazon Resource Name (ARN) of the device instance.",
+                    "minLength": 32,
+                    "type": "string"
+                },
+                "labels": {
+                    "description": "An array of strings that you want to associate with the device instance.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "profileArn": {
+                    "description": "The Amazon Resource Name (ARN) of the profile that you want to associate with the device instance.",
+                    "minLength": 32,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "arn"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,1128 @@
+{
+    "title": "AWS Device Farm",
+    "description": "AWS Device Farm is a service that enables mobile app developers to test Android, iOS, and Fire OS apps on physical phones, tablets, and other devices in the cloud.",
+    "docsUrl": "https://aws.amazon.com/devicefarm/",
+    "url": "https://api.apis.guru/v2/specs/amazonaws.com/devicefarm/2015-06-23/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://devicefarm.amazonaws.com/",
+                    "http://devicefarm.amazonaws.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "hmac": {
+                "label": "Authorization (hmac)",
+                "viewClass": "TextFieldView",
+                "note": "Amazon Signature authorization v4"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "CreateDevicePool": {
+            "main": "./lib/actions/CreateDevicePool.js",
+            "title": "Creates a device pool.",
+            "description": "Creates a device pool.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateDevicePool.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateInstanceProfile": {
+            "main": "./lib/actions/CreateInstanceProfile.js",
+            "title": "Creates a profile that can be applied to one or more private fleet device instances.",
+            "description": "Creates a profile that can be applied to one or more private fleet device instances.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateInstanceProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateNetworkProfile": {
+            "main": "./lib/actions/CreateNetworkProfile.js",
+            "title": "Creates a network profile.",
+            "description": "Creates a network profile.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateNetworkProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateProject": {
+            "main": "./lib/actions/CreateProject.js",
+            "title": "Creates a new project.",
+            "description": "Creates a new project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateRemoteAccessSession": {
+            "main": "./lib/actions/CreateRemoteAccessSession.js",
+            "title": "Specifies and starts a remote access session.",
+            "description": "Specifies and starts a remote access session.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateRemoteAccessSession.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateUpload": {
+            "main": "./lib/actions/CreateUpload.js",
+            "title": "Uploads an app or test scripts.",
+            "description": "Uploads an app or test scripts.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateUpload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CreateVPCEConfiguration": {
+            "main": "./lib/actions/CreateVPCEConfiguration.js",
+            "title": "Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "description": "Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CreateVPCEConfiguration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteDevicePool": {
+            "main": "./lib/actions/DeleteDevicePool.js",
+            "title": "Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the system.",
+            "description": "Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the system.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteDevicePool.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteInstanceProfile": {
+            "main": "./lib/actions/DeleteInstanceProfile.js",
+            "title": "Deletes a profile that can be applied to one or more private device instances.",
+            "description": "Deletes a profile that can be applied to one or more private device instances.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteInstanceProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteNetworkProfile": {
+            "main": "./lib/actions/DeleteNetworkProfile.js",
+            "title": "Deletes a network profile.",
+            "description": "Deletes a network profile.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteNetworkProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteProject": {
+            "main": "./lib/actions/DeleteProject.js",
+            "title": "<p>Deletes an AWS Device Farm project, given the project ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
+            "description": "<p>Deletes an AWS Device Farm project, given the project ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteRemoteAccessSession": {
+            "main": "./lib/actions/DeleteRemoteAccessSession.js",
+            "title": "Deletes a completed remote access session and its results.",
+            "description": "Deletes a completed remote access session and its results.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteRemoteAccessSession.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteRun": {
+            "main": "./lib/actions/DeleteRun.js",
+            "title": "<p>Deletes the run, given the run ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
+            "description": "<p>Deletes the run, given the run ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteUpload": {
+            "main": "./lib/actions/DeleteUpload.js",
+            "title": "Deletes an upload given the upload ARN.",
+            "description": "Deletes an upload given the upload ARN.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteUpload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DeleteVPCEConfiguration": {
+            "main": "./lib/actions/DeleteVPCEConfiguration.js",
+            "title": "Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "description": "Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DeleteVPCEConfiguration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetAccountSettings": {
+            "main": "./lib/actions/GetAccountSettings.js",
+            "title": "Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the account.",
+            "description": "Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the account.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetAccountSettings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDevice": {
+            "main": "./lib/actions/GetDevice.js",
+            "title": "Gets information about a unique device type.",
+            "description": "Gets information about a unique device type.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDevice.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDeviceInstance": {
+            "main": "./lib/actions/GetDeviceInstance.js",
+            "title": "Returns information about a device instance belonging to a private device fleet.",
+            "description": "Returns information about a device instance belonging to a private device fleet.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDeviceInstance.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDevicePool": {
+            "main": "./lib/actions/GetDevicePool.js",
+            "title": "Gets information about a device pool.",
+            "description": "Gets information about a device pool.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDevicePool.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetDevicePoolCompatibility": {
+            "main": "./lib/actions/GetDevicePoolCompatibility.js",
+            "title": "Gets information about compatibility with a device pool.",
+            "description": "Gets information about compatibility with a device pool.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetDevicePoolCompatibility.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetInstanceProfile": {
+            "main": "./lib/actions/GetInstanceProfile.js",
+            "title": "Returns information about the specified instance profile.",
+            "description": "Returns information about the specified instance profile.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetInstanceProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetJob": {
+            "main": "./lib/actions/GetJob.js",
+            "title": "Gets information about a job.",
+            "description": "Gets information about a job.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetNetworkProfile": {
+            "main": "./lib/actions/GetNetworkProfile.js",
+            "title": "Returns information about a network profile.",
+            "description": "Returns information about a network profile.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetNetworkProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetOfferingStatus": {
+            "main": "./lib/actions/GetOfferingStatus.js",
+            "title": "Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many offerings are currently available and the offerings that will be available in the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "description": "Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many offerings are currently available and the offerings that will be available in the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetOfferingStatus.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetProject": {
+            "main": "./lib/actions/GetProject.js",
+            "title": "Gets information about a project.",
+            "description": "Gets information about a project.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRemoteAccessSession": {
+            "main": "./lib/actions/GetRemoteAccessSession.js",
+            "title": "Returns a link to a currently running remote access session.",
+            "description": "Returns a link to a currently running remote access session.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRemoteAccessSession.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetRun": {
+            "main": "./lib/actions/GetRun.js",
+            "title": "Gets information about a run.",
+            "description": "Gets information about a run.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetSuite": {
+            "main": "./lib/actions/GetSuite.js",
+            "title": "Gets information about a suite.",
+            "description": "Gets information about a suite.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetSuite.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetTest": {
+            "main": "./lib/actions/GetTest.js",
+            "title": "Gets information about a test.",
+            "description": "Gets information about a test.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetTest.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetUpload": {
+            "main": "./lib/actions/GetUpload.js",
+            "title": "Gets information about an upload.",
+            "description": "Gets information about an upload.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetUpload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "GetVPCEConfiguration": {
+            "main": "./lib/actions/GetVPCEConfiguration.js",
+            "title": "Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "description": "Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/GetVPCEConfiguration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "InstallToRemoteAccessSession": {
+            "main": "./lib/actions/InstallToRemoteAccessSession.js",
+            "title": "Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa format.",
+            "description": "Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa format.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/InstallToRemoteAccessSession.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListArtifacts": {
+            "main": "./lib/actions/ListArtifacts.js",
+            "title": "Gets information about artifacts.",
+            "description": "Gets information about artifacts.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListArtifacts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListDeviceInstances": {
+            "main": "./lib/actions/ListDeviceInstances.js",
+            "title": "Returns information about the private device instances associated with one or more AWS accounts.",
+            "description": "Returns information about the private device instances associated with one or more AWS accounts.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListDeviceInstances.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListDevicePools": {
+            "main": "./lib/actions/ListDevicePools.js",
+            "title": "Gets information about device pools.",
+            "description": "Gets information about device pools.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListDevicePools.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListDevices": {
+            "main": "./lib/actions/ListDevices.js",
+            "title": "Gets information about unique device types.",
+            "description": "Gets information about unique device types.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListDevices.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListInstanceProfiles": {
+            "main": "./lib/actions/ListInstanceProfiles.js",
+            "title": "Returns information about all the instance profiles in an AWS account.",
+            "description": "Returns information about all the instance profiles in an AWS account.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListInstanceProfiles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListJobs": {
+            "main": "./lib/actions/ListJobs.js",
+            "title": "Gets information about jobs for a given test run.",
+            "description": "Gets information about jobs for a given test run.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListJobs.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListNetworkProfiles": {
+            "main": "./lib/actions/ListNetworkProfiles.js",
+            "title": "Returns the list of available network profiles.",
+            "description": "Returns the list of available network profiles.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListNetworkProfiles.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListOfferingPromotions": {
+            "main": "./lib/actions/ListOfferingPromotions.js",
+            "title": "Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion. The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "description": "Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion. The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListOfferingPromotions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListOfferingTransactions": {
+            "main": "./lib/actions/ListOfferingTransactions.js",
+            "title": "Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "description": "Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListOfferingTransactions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListOfferings": {
+            "main": "./lib/actions/ListOfferings.js",
+            "title": "Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "description": "Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListOfferings.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListProjects": {
+            "main": "./lib/actions/ListProjects.js",
+            "title": "Gets information about projects.",
+            "description": "Gets information about projects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListProjects.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListRemoteAccessSessions": {
+            "main": "./lib/actions/ListRemoteAccessSessions.js",
+            "title": "Returns a list of all currently running remote access sessions.",
+            "description": "Returns a list of all currently running remote access sessions.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListRemoteAccessSessions.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListRuns": {
+            "main": "./lib/actions/ListRuns.js",
+            "title": "Gets information about runs, given an AWS Device Farm project ARN.",
+            "description": "Gets information about runs, given an AWS Device Farm project ARN.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListRuns.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListSamples": {
+            "main": "./lib/actions/ListSamples.js",
+            "title": "Gets information about samples, given an AWS Device Farm job ARN.",
+            "description": "Gets information about samples, given an AWS Device Farm job ARN.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListSamples.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListSuites": {
+            "main": "./lib/actions/ListSuites.js",
+            "title": "Gets information about test suites for a given job.",
+            "description": "Gets information about test suites for a given job.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListSuites.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListTests": {
+            "main": "./lib/actions/ListTests.js",
+            "title": "Gets information about tests in a given test suite.",
+            "description": "Gets information about tests in a given test suite.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListTests.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListUniqueProblems": {
+            "main": "./lib/actions/ListUniqueProblems.js",
+            "title": "Gets information about unique problems.",
+            "description": "Gets information about unique problems.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListUniqueProblems.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListUploads": {
+            "main": "./lib/actions/ListUploads.js",
+            "title": "Gets information about uploads, given an AWS Device Farm project ARN.",
+            "description": "Gets information about uploads, given an AWS Device Farm project ARN.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListUploads.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ListVPCEConfigurations": {
+            "main": "./lib/actions/ListVPCEConfigurations.js",
+            "title": "Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.",
+            "description": "Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListVPCEConfigurations.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "PurchaseOffering": {
+            "main": "./lib/actions/PurchaseOffering.js",
+            "title": "Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "description": "Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/PurchaseOffering.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "RenewOffering": {
+            "main": "./lib/actions/RenewOffering.js",
+            "title": "Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "description": "Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/RenewOffering.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ScheduleRun": {
+            "main": "./lib/actions/ScheduleRun.js",
+            "title": "Schedules a run.",
+            "description": "Schedules a run.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ScheduleRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "StopJob": {
+            "main": "./lib/actions/StopJob.js",
+            "title": "Initiates a stop request for the current job. AWS Device Farm will immediately stop the job on the device where tests have not started executing, and you will not be billed for this device. On the device where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on the device. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
+            "description": "Initiates a stop request for the current job. AWS Device Farm will immediately stop the job on the device where tests have not started executing, and you will not be billed for this device. On the device where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on the device. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/StopJob.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "StopRemoteAccessSession": {
+            "main": "./lib/actions/StopRemoteAccessSession.js",
+            "title": "Ends a specified remote access session.",
+            "description": "Ends a specified remote access session.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/StopRemoteAccessSession.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "StopRun": {
+            "main": "./lib/actions/StopRun.js",
+            "title": "Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests have not started executing, and you will not be billed for these devices. On devices where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
+            "description": "Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests have not started executing, and you will not be billed for these devices. On devices where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/StopRun.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateDeviceInstance": {
+            "main": "./lib/actions/UpdateDeviceInstance.js",
+            "title": "Updates information about an existing private device instance.",
+            "description": "Updates information about an existing private device instance.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateDeviceInstance.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateDevicePool": {
+            "main": "./lib/actions/UpdateDevicePool.js",
+            "title": "Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are all-or-nothing, meaning they can only be updated as a whole (or not at all).",
+            "description": "Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are all-or-nothing, meaning they can only be updated as a whole (or not at all).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateDevicePool.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateInstanceProfile": {
+            "main": "./lib/actions/UpdateInstanceProfile.js",
+            "title": "Updates information about an existing private device instance profile.",
+            "description": "Updates information about an existing private device instance profile.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateInstanceProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateNetworkProfile": {
+            "main": "./lib/actions/UpdateNetworkProfile.js",
+            "title": "Updates the network profile with specific settings.",
+            "description": "Updates the network profile with specific settings.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateNetworkProfile.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateProject": {
+            "main": "./lib/actions/UpdateProject.js",
+            "title": "Modifies the specified project name, given the project ARN and a new name.",
+            "description": "Modifies the specified project name, given the project ARN and a new name.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateProject.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateUpload": {
+            "main": "./lib/actions/UpdateUpload.js",
+            "title": "Update an uploaded test specification (test spec).",
+            "description": "Update an uploaded test specification (test spec).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateUpload.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpdateVPCEConfiguration": {
+            "main": "./lib/actions/UpdateVPCEConfiguration.js",
+            "title": "Updates information about an existing Amazon Virtual Private Cloud (VPC) endpoint configuration.",
+            "description": "Updates information about an existing Amazon Virtual Private Cloud (VPC) endpoint configuration.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpdateVPCEConfiguration.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "description": {
+                    "description": "The description of the network profile.",
+                    "maxLength": 16384,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "downlinkBandwidthBits": {
+                    "description": "The data throughput rate in bits per second, as an integer from 0 to 104857600.",
+                    "type": "integer"
+                },
+                "downlinkDelayMs": {
+                    "description": "Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.",
+                    "type": "integer"
+                },
+                "downlinkJitterMs": {
+                    "description": "Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.",
+                    "type": "integer"
+                },
+                "downlinkLossPercent": {
+                    "description": "Proportion of received packets that fail to arrive from 0 to 100 percent.",
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "The name you wish to specify for the new network profile.",
+                    "maxLength": 256,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "projectArn": {
+                    "description": "The Amazon Resource Name (ARN) of the project for which you want to create a network profile.",
+                    "minLength": 32,
+                    "type": "string"
+                },
+                "type": {
+                    "description": "The type of network profile you wish to create. Valid values are listed below.",
+                    "enum": [
+                        "CURATED",
+                        "PRIVATE"
+                    ],
+                    "type": "string"
+                },
+                "uplinkBandwidthBits": {
+                    "description": "The data throughput rate in bits per second, as an integer from 0 to 104857600.",
+                    "type": "integer"
+                },
+                "uplinkDelayMs": {
+                    "description": "Delay time for all packets to destination in milliseconds as an integer from 0 to 2000.",
+                    "type": "integer"
+                },
+                "uplinkJitterMs": {
+                    "description": "Time variation in the delay of received packets in milliseconds as an integer from 0 to 2000.",
+                    "type": "integer"
+                },
+                "uplinkLossPercent": {
+                    "description": "Proportion of transmitted packets that fail to arrive from 0 to 100 percent.",
+                    "maximum": 100,
+                    "minimum": 0,
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "projectArn",
+                "name"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

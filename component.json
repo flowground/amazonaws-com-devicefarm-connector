@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,7 +38,7 @@
     "actions": {
         "CreateDevicePool": {
             "main": "./lib/actions/CreateDevicePool.js",
-            "title": "Creates a device pool.",
+            "title": "CreateDevicePool",
             "description": "Creates a device pool.",
             "fields": {
                 "verbose": {
@@ -55,7 +55,7 @@
         },
         "CreateInstanceProfile": {
             "main": "./lib/actions/CreateInstanceProfile.js",
-            "title": "Creates a profile that can be applied to one or more private fleet device instances.",
+            "title": "CreateInstanceProfile",
             "description": "Creates a profile that can be applied to one or more private fleet device instances.",
             "fields": {
                 "verbose": {
@@ -72,7 +72,7 @@
         },
         "CreateNetworkProfile": {
             "main": "./lib/actions/CreateNetworkProfile.js",
-            "title": "Creates a network profile.",
+            "title": "CreateNetworkProfile",
             "description": "Creates a network profile.",
             "fields": {
                 "verbose": {
@@ -89,7 +89,7 @@
         },
         "CreateProject": {
             "main": "./lib/actions/CreateProject.js",
-            "title": "Creates a new project.",
+            "title": "CreateProject",
             "description": "Creates a new project.",
             "fields": {
                 "verbose": {
@@ -106,7 +106,7 @@
         },
         "CreateRemoteAccessSession": {
             "main": "./lib/actions/CreateRemoteAccessSession.js",
-            "title": "Specifies and starts a remote access session.",
+            "title": "CreateRemoteAccessSession",
             "description": "Specifies and starts a remote access session.",
             "fields": {
                 "verbose": {
@@ -123,7 +123,7 @@
         },
         "CreateUpload": {
             "main": "./lib/actions/CreateUpload.js",
-            "title": "Uploads an app or test scripts.",
+            "title": "CreateUpload",
             "description": "Uploads an app or test scripts.",
             "fields": {
                 "verbose": {
@@ -140,7 +140,7 @@
         },
         "CreateVPCEConfiguration": {
             "main": "./lib/actions/CreateVPCEConfiguration.js",
-            "title": "Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "title": "CreateVPCEConfiguration",
             "description": "Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.",
             "fields": {
                 "verbose": {
@@ -157,7 +157,7 @@
         },
         "DeleteDevicePool": {
             "main": "./lib/actions/DeleteDevicePool.js",
-            "title": "Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the system.",
+            "title": "DeleteDevicePool",
             "description": "Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the system.",
             "fields": {
                 "verbose": {
@@ -174,7 +174,7 @@
         },
         "DeleteInstanceProfile": {
             "main": "./lib/actions/DeleteInstanceProfile.js",
-            "title": "Deletes a profile that can be applied to one or more private device instances.",
+            "title": "DeleteInstanceProfile",
             "description": "Deletes a profile that can be applied to one or more private device instances.",
             "fields": {
                 "verbose": {
@@ -191,7 +191,7 @@
         },
         "DeleteNetworkProfile": {
             "main": "./lib/actions/DeleteNetworkProfile.js",
-            "title": "Deletes a network profile.",
+            "title": "DeleteNetworkProfile",
             "description": "Deletes a network profile.",
             "fields": {
                 "verbose": {
@@ -208,8 +208,8 @@
         },
         "DeleteProject": {
             "main": "./lib/actions/DeleteProject.js",
-            "title": "<p>Deletes an AWS Device Farm project, given the project ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
-            "description": "<p>Deletes an AWS Device Farm project, given the project ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
+            "title": "DeleteProject",
+            "description": "Deletes an AWS Device Farm project, given the project ARN.\n\n Note Deleting this resource does not stop an in-progress run.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -225,7 +225,7 @@
         },
         "DeleteRemoteAccessSession": {
             "main": "./lib/actions/DeleteRemoteAccessSession.js",
-            "title": "Deletes a completed remote access session and its results.",
+            "title": "DeleteRemoteAccessSession",
             "description": "Deletes a completed remote access session and its results.",
             "fields": {
                 "verbose": {
@@ -242,8 +242,8 @@
         },
         "DeleteRun": {
             "main": "./lib/actions/DeleteRun.js",
-            "title": "<p>Deletes the run, given the run ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
-            "description": "<p>Deletes the run, given the run ARN.</p> <p> <b>Note</b> Deleting this resource does not stop an in-progress run.</p>",
+            "title": "DeleteRun",
+            "description": "Deletes the run, given the run ARN.\n\n Note Deleting this resource does not stop an in-progress run.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -259,7 +259,7 @@
         },
         "DeleteUpload": {
             "main": "./lib/actions/DeleteUpload.js",
-            "title": "Deletes an upload given the upload ARN.",
+            "title": "DeleteUpload",
             "description": "Deletes an upload given the upload ARN.",
             "fields": {
                 "verbose": {
@@ -276,7 +276,7 @@
         },
         "DeleteVPCEConfiguration": {
             "main": "./lib/actions/DeleteVPCEConfiguration.js",
-            "title": "Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "title": "DeleteVPCEConfiguration",
             "description": "Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.",
             "fields": {
                 "verbose": {
@@ -293,7 +293,7 @@
         },
         "GetAccountSettings": {
             "main": "./lib/actions/GetAccountSettings.js",
-            "title": "Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the account.",
+            "title": "GetAccountSettings",
             "description": "Returns the number of unmetered iOS and/or unmetered Android devices that have been purchased by the account.",
             "fields": {
                 "verbose": {
@@ -310,7 +310,7 @@
         },
         "GetDevice": {
             "main": "./lib/actions/GetDevice.js",
-            "title": "Gets information about a unique device type.",
+            "title": "GetDevice",
             "description": "Gets information about a unique device type.",
             "fields": {
                 "verbose": {
@@ -327,7 +327,7 @@
         },
         "GetDeviceInstance": {
             "main": "./lib/actions/GetDeviceInstance.js",
-            "title": "Returns information about a device instance belonging to a private device fleet.",
+            "title": "GetDeviceInstance",
             "description": "Returns information about a device instance belonging to a private device fleet.",
             "fields": {
                 "verbose": {
@@ -344,7 +344,7 @@
         },
         "GetDevicePool": {
             "main": "./lib/actions/GetDevicePool.js",
-            "title": "Gets information about a device pool.",
+            "title": "GetDevicePool",
             "description": "Gets information about a device pool.",
             "fields": {
                 "verbose": {
@@ -361,7 +361,7 @@
         },
         "GetDevicePoolCompatibility": {
             "main": "./lib/actions/GetDevicePoolCompatibility.js",
-            "title": "Gets information about compatibility with a device pool.",
+            "title": "GetDevicePoolCompatibility",
             "description": "Gets information about compatibility with a device pool.",
             "fields": {
                 "verbose": {
@@ -378,7 +378,7 @@
         },
         "GetInstanceProfile": {
             "main": "./lib/actions/GetInstanceProfile.js",
-            "title": "Returns information about the specified instance profile.",
+            "title": "GetInstanceProfile",
             "description": "Returns information about the specified instance profile.",
             "fields": {
                 "verbose": {
@@ -395,7 +395,7 @@
         },
         "GetJob": {
             "main": "./lib/actions/GetJob.js",
-            "title": "Gets information about a job.",
+            "title": "GetJob",
             "description": "Gets information about a job.",
             "fields": {
                 "verbose": {
@@ -412,7 +412,7 @@
         },
         "GetNetworkProfile": {
             "main": "./lib/actions/GetNetworkProfile.js",
-            "title": "Returns information about a network profile.",
+            "title": "GetNetworkProfile",
             "description": "Returns information about a network profile.",
             "fields": {
                 "verbose": {
@@ -429,7 +429,7 @@
         },
         "GetOfferingStatus": {
             "main": "./lib/actions/GetOfferingStatus.js",
-            "title": "Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many offerings are currently available and the offerings that will be available in the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "title": "GetOfferingStatus",
             "description": "Gets the current status and future status of all offerings purchased by an AWS account. The response indicates how many offerings are currently available and the offerings that will be available in the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
             "fields": {
                 "verbose": {
@@ -446,7 +446,7 @@
         },
         "GetProject": {
             "main": "./lib/actions/GetProject.js",
-            "title": "Gets information about a project.",
+            "title": "GetProject",
             "description": "Gets information about a project.",
             "fields": {
                 "verbose": {
@@ -463,7 +463,7 @@
         },
         "GetRemoteAccessSession": {
             "main": "./lib/actions/GetRemoteAccessSession.js",
-            "title": "Returns a link to a currently running remote access session.",
+            "title": "GetRemoteAccessSession",
             "description": "Returns a link to a currently running remote access session.",
             "fields": {
                 "verbose": {
@@ -480,7 +480,7 @@
         },
         "GetRun": {
             "main": "./lib/actions/GetRun.js",
-            "title": "Gets information about a run.",
+            "title": "GetRun",
             "description": "Gets information about a run.",
             "fields": {
                 "verbose": {
@@ -497,7 +497,7 @@
         },
         "GetSuite": {
             "main": "./lib/actions/GetSuite.js",
-            "title": "Gets information about a suite.",
+            "title": "GetSuite",
             "description": "Gets information about a suite.",
             "fields": {
                 "verbose": {
@@ -514,7 +514,7 @@
         },
         "GetTest": {
             "main": "./lib/actions/GetTest.js",
-            "title": "Gets information about a test.",
+            "title": "GetTest",
             "description": "Gets information about a test.",
             "fields": {
                 "verbose": {
@@ -531,7 +531,7 @@
         },
         "GetUpload": {
             "main": "./lib/actions/GetUpload.js",
-            "title": "Gets information about an upload.",
+            "title": "GetUpload",
             "description": "Gets information about an upload.",
             "fields": {
                 "verbose": {
@@ -548,7 +548,7 @@
         },
         "GetVPCEConfiguration": {
             "main": "./lib/actions/GetVPCEConfiguration.js",
-            "title": "Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.",
+            "title": "GetVPCEConfiguration",
             "description": "Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.",
             "fields": {
                 "verbose": {
@@ -565,7 +565,7 @@
         },
         "InstallToRemoteAccessSession": {
             "main": "./lib/actions/InstallToRemoteAccessSession.js",
-            "title": "Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa format.",
+            "title": "InstallToRemoteAccessSession",
             "description": "Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa format.",
             "fields": {
                 "verbose": {
@@ -582,7 +582,7 @@
         },
         "ListArtifacts": {
             "main": "./lib/actions/ListArtifacts.js",
-            "title": "Gets information about artifacts.",
+            "title": "ListArtifacts",
             "description": "Gets information about artifacts.",
             "fields": {
                 "verbose": {
@@ -599,7 +599,7 @@
         },
         "ListDeviceInstances": {
             "main": "./lib/actions/ListDeviceInstances.js",
-            "title": "Returns information about the private device instances associated with one or more AWS accounts.",
+            "title": "ListDeviceInstances",
             "description": "Returns information about the private device instances associated with one or more AWS accounts.",
             "fields": {
                 "verbose": {
@@ -616,7 +616,7 @@
         },
         "ListDevicePools": {
             "main": "./lib/actions/ListDevicePools.js",
-            "title": "Gets information about device pools.",
+            "title": "ListDevicePools",
             "description": "Gets information about device pools.",
             "fields": {
                 "verbose": {
@@ -633,7 +633,7 @@
         },
         "ListDevices": {
             "main": "./lib/actions/ListDevices.js",
-            "title": "Gets information about unique device types.",
+            "title": "ListDevices",
             "description": "Gets information about unique device types.",
             "fields": {
                 "verbose": {
@@ -650,7 +650,7 @@
         },
         "ListInstanceProfiles": {
             "main": "./lib/actions/ListInstanceProfiles.js",
-            "title": "Returns information about all the instance profiles in an AWS account.",
+            "title": "ListInstanceProfiles",
             "description": "Returns information about all the instance profiles in an AWS account.",
             "fields": {
                 "verbose": {
@@ -667,7 +667,7 @@
         },
         "ListJobs": {
             "main": "./lib/actions/ListJobs.js",
-            "title": "Gets information about jobs for a given test run.",
+            "title": "ListJobs",
             "description": "Gets information about jobs for a given test run.",
             "fields": {
                 "verbose": {
@@ -684,7 +684,7 @@
         },
         "ListNetworkProfiles": {
             "main": "./lib/actions/ListNetworkProfiles.js",
-            "title": "Returns the list of available network profiles.",
+            "title": "ListNetworkProfiles",
             "description": "Returns the list of available network profiles.",
             "fields": {
                 "verbose": {
@@ -701,7 +701,7 @@
         },
         "ListOfferingPromotions": {
             "main": "./lib/actions/ListOfferingPromotions.js",
-            "title": "Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion. The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "title": "ListOfferingPromotions",
             "description": "Returns a list of offering promotions. Each offering promotion record contains the ID and description of the promotion. The API returns a <code>NotEligible</code> error if the caller is not permitted to invoke the operation. Contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
             "fields": {
                 "verbose": {
@@ -718,7 +718,7 @@
         },
         "ListOfferingTransactions": {
             "main": "./lib/actions/ListOfferingTransactions.js",
-            "title": "Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "title": "ListOfferingTransactions",
             "description": "Returns a list of all historical purchases, renewals, and system renewal transactions for an AWS account. The list is paginated and ordered by a descending timestamp (most recent transactions are first). The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
             "fields": {
                 "verbose": {
@@ -735,7 +735,7 @@
         },
         "ListOfferings": {
             "main": "./lib/actions/ListOfferings.js",
-            "title": "Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "title": "ListOfferings",
             "description": "Returns a list of products or offerings that the user can manage through the API. Each offering record indicates the recurring price per unit and the frequency for that offering. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
             "fields": {
                 "verbose": {
@@ -752,7 +752,7 @@
         },
         "ListProjects": {
             "main": "./lib/actions/ListProjects.js",
-            "title": "Gets information about projects.",
+            "title": "ListProjects",
             "description": "Gets information about projects.",
             "fields": {
                 "verbose": {
@@ -769,7 +769,7 @@
         },
         "ListRemoteAccessSessions": {
             "main": "./lib/actions/ListRemoteAccessSessions.js",
-            "title": "Returns a list of all currently running remote access sessions.",
+            "title": "ListRemoteAccessSessions",
             "description": "Returns a list of all currently running remote access sessions.",
             "fields": {
                 "verbose": {
@@ -786,7 +786,7 @@
         },
         "ListRuns": {
             "main": "./lib/actions/ListRuns.js",
-            "title": "Gets information about runs, given an AWS Device Farm project ARN.",
+            "title": "ListRuns",
             "description": "Gets information about runs, given an AWS Device Farm project ARN.",
             "fields": {
                 "verbose": {
@@ -803,7 +803,7 @@
         },
         "ListSamples": {
             "main": "./lib/actions/ListSamples.js",
-            "title": "Gets information about samples, given an AWS Device Farm job ARN.",
+            "title": "ListSamples",
             "description": "Gets information about samples, given an AWS Device Farm job ARN.",
             "fields": {
                 "verbose": {
@@ -820,7 +820,7 @@
         },
         "ListSuites": {
             "main": "./lib/actions/ListSuites.js",
-            "title": "Gets information about test suites for a given job.",
+            "title": "ListSuites",
             "description": "Gets information about test suites for a given job.",
             "fields": {
                 "verbose": {
@@ -837,7 +837,7 @@
         },
         "ListTests": {
             "main": "./lib/actions/ListTests.js",
-            "title": "Gets information about tests in a given test suite.",
+            "title": "ListTests",
             "description": "Gets information about tests in a given test suite.",
             "fields": {
                 "verbose": {
@@ -854,7 +854,7 @@
         },
         "ListUniqueProblems": {
             "main": "./lib/actions/ListUniqueProblems.js",
-            "title": "Gets information about unique problems.",
+            "title": "ListUniqueProblems",
             "description": "Gets information about unique problems.",
             "fields": {
                 "verbose": {
@@ -871,7 +871,7 @@
         },
         "ListUploads": {
             "main": "./lib/actions/ListUploads.js",
-            "title": "Gets information about uploads, given an AWS Device Farm project ARN.",
+            "title": "ListUploads",
             "description": "Gets information about uploads, given an AWS Device Farm project ARN.",
             "fields": {
                 "verbose": {
@@ -888,7 +888,7 @@
         },
         "ListVPCEConfigurations": {
             "main": "./lib/actions/ListVPCEConfigurations.js",
-            "title": "Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.",
+            "title": "ListVPCEConfigurations",
             "description": "Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.",
             "fields": {
                 "verbose": {
@@ -905,7 +905,7 @@
         },
         "PurchaseOffering": {
             "main": "./lib/actions/PurchaseOffering.js",
-            "title": "Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "title": "PurchaseOffering",
             "description": "Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
             "fields": {
                 "verbose": {
@@ -922,7 +922,7 @@
         },
         "RenewOffering": {
             "main": "./lib/actions/RenewOffering.js",
-            "title": "Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
+            "title": "RenewOffering",
             "description": "Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. Please contact <a href=\"mailto:aws-devicefarm-support@amazon.com\">aws-devicefarm-support@amazon.com</a> if you believe that you should be able to invoke this operation.",
             "fields": {
                 "verbose": {
@@ -939,7 +939,7 @@
         },
         "ScheduleRun": {
             "main": "./lib/actions/ScheduleRun.js",
-            "title": "Schedules a run.",
+            "title": "ScheduleRun",
             "description": "Schedules a run.",
             "fields": {
                 "verbose": {
@@ -956,7 +956,7 @@
         },
         "StopJob": {
             "main": "./lib/actions/StopJob.js",
-            "title": "Initiates a stop request for the current job. AWS Device Farm will immediately stop the job on the device where tests have not started executing, and you will not be billed for this device. On the device where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on the device. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
+            "title": "StopJob",
             "description": "Initiates a stop request for the current job. AWS Device Farm will immediately stop the job on the device where tests have not started executing, and you will not be billed for this device. On the device where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on the device. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
             "fields": {
                 "verbose": {
@@ -973,7 +973,7 @@
         },
         "StopRemoteAccessSession": {
             "main": "./lib/actions/StopRemoteAccessSession.js",
-            "title": "Ends a specified remote access session.",
+            "title": "StopRemoteAccessSession",
             "description": "Ends a specified remote access session.",
             "fields": {
                 "verbose": {
@@ -990,7 +990,7 @@
         },
         "StopRun": {
             "main": "./lib/actions/StopRun.js",
-            "title": "Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests have not started executing, and you will not be billed for these devices. On devices where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
+            "title": "StopRun",
             "description": "Initiates a stop request for the current test run. AWS Device Farm will immediately stop the run on devices where tests have not started executing, and you will not be billed for these devices. On devices where tests have started executing, Setup Suite and Teardown Suite tests will run to completion before stopping execution on those devices. You will be billed for Setup, Teardown, and any tests that were in progress or already completed.",
             "fields": {
                 "verbose": {
@@ -1007,7 +1007,7 @@
         },
         "UpdateDeviceInstance": {
             "main": "./lib/actions/UpdateDeviceInstance.js",
-            "title": "Updates information about an existing private device instance.",
+            "title": "UpdateDeviceInstance",
             "description": "Updates information about an existing private device instance.",
             "fields": {
                 "verbose": {
@@ -1024,7 +1024,7 @@
         },
         "UpdateDevicePool": {
             "main": "./lib/actions/UpdateDevicePool.js",
-            "title": "Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are all-or-nothing, meaning they can only be updated as a whole (or not at all).",
+            "title": "UpdateDevicePool",
             "description": "Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are all-or-nothing, meaning they can only be updated as a whole (or not at all).",
             "fields": {
                 "verbose": {
@@ -1041,7 +1041,7 @@
         },
         "UpdateInstanceProfile": {
             "main": "./lib/actions/UpdateInstanceProfile.js",
-            "title": "Updates information about an existing private device instance profile.",
+            "title": "UpdateInstanceProfile",
             "description": "Updates information about an existing private device instance profile.",
             "fields": {
                 "verbose": {
@@ -1058,7 +1058,7 @@
         },
         "UpdateNetworkProfile": {
             "main": "./lib/actions/UpdateNetworkProfile.js",
-            "title": "Updates the network profile with specific settings.",
+            "title": "UpdateNetworkProfile",
             "description": "Updates the network profile with specific settings.",
             "fields": {
                 "verbose": {
@@ -1075,7 +1075,7 @@
         },
         "UpdateProject": {
             "main": "./lib/actions/UpdateProject.js",
-            "title": "Modifies the specified project name, given the project ARN and a new name.",
+            "title": "UpdateProject",
             "description": "Modifies the specified project name, given the project ARN and a new name.",
             "fields": {
                 "verbose": {
@@ -1092,7 +1092,7 @@
         },
         "UpdateUpload": {
             "main": "./lib/actions/UpdateUpload.js",
-            "title": "Update an uploaded test specification (test spec).",
+            "title": "UpdateUpload",
             "description": "Update an uploaded test specification (test spec).",
             "fields": {
                 "verbose": {
@@ -1109,7 +1109,7 @@
         },
         "UpdateVPCEConfiguration": {
             "main": "./lib/actions/UpdateVPCEConfiguration.js",
-            "title": "Updates information about an existing Amazon Virtual Private Cloud (VPC) endpoint configuration.",
+            "title": "UpdateVPCEConfiguration",
             "description": "Updates information about an existing Amazon Virtual Private Cloud (VPC) endpoint configuration.",
             "fields": {
                 "verbose": {
